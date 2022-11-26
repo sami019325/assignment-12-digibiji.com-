@@ -1,0 +1,28 @@
+.bg_Img_Of_Home {
+    animation: MoveUpDown 10s linear infinite;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* .bg_Img_Of_Home {
+        top: 10;
+        left: 10;
+        right: 10;
+        height: 300px;
+        padding: 20px;
+    } */
+}
