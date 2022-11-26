@@ -19,7 +19,7 @@
 
 
 .hide_One {
-    animation: hideOne 10s linear infinite;
+    animation: hideOne 10s ease-in-out infinite;
     opacity: 1;
 }
 
@@ -27,7 +27,7 @@
 
 
     from {
-        background-color: rgb(226, 43, 202);
+        background-color: tomato;
     }
 
 
