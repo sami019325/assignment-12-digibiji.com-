@@ -17,12 +17,22 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    /* .bg_Img_Of_Home {
-        top: 10;
-        left: 10;
-        right: 10;
-        height: 300px;
-        padding: 20px;
-    } */
+
+.hide_One {
+    animation: hideOne 10s linear infinite;
+    opacity: 1;
+}
+
+@keyframes hideOne {
+
+
+    from {
+        background-color: rgb(226, 43, 202);
+    }
+
+
+
+    to {
+        background-color: brown;
+    }
 }
