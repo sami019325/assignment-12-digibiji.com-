@@ -78,7 +78,7 @@ const SharedData = ({ children }) => {
     const updateUsercall = (name) => {
         //   setLoading(true)
         updateProfile(auth.currentUser, {
-            displayName: `${name}`, photoURL: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png"
+            displayName: `${name}`, photoURL: "https://i.ibb.co/zx7gVq4/handsome-boy-smiling-with-his-hands-up-free-vector-removebg-preview.png"
         }).then(() => {
             console.log('Profile updated!')
             //   setLoading(false)

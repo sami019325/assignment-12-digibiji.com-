@@ -44,7 +44,7 @@ const Register = () => {
             <button className='card card-side shadow-xl m-auto w-10/12 h-24  mt-10 rounded-full border-2 flex justify-center items-center font-bold text-3xl text-white cursor-pointer bg-indigo-800' onClick={handleGoogleSignIn} >Easy Log In</button>
             <form onSubmit={handleRegister}>
                 <div className="card card-side bg-base-100 shadow-xl w-10/12 m-auto grid grid-cols-1 mt-10 lg:grid-cols-4">
-                    <figure className=' col-span-2'><img className='w-6/12' src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="Movie" /></figure>
+                    <figure className=' col-span-2'><img className='w-6/12' src="https://i.ibb.co/zx7gVq4/handsome-boy-smiling-with-his-hands-up-free-vector-removebg-preview.png" alt="Movie" /></figure>
                     <div className="card-body col-span-2 select-none">
                         <h2 className="card-title">Create an account</h2>
                         <p>User Name:</p>

@@ -24,7 +24,7 @@ const NavBar = () => {
                     </div>
                     <div className="flex-none">
                         <ul className='flex items-center justify-center'>
-                            <li><Link className='btn btn-ghost font-bold'>Blog</Link></li>
+                            <li><Link to='/blog' className='btn btn-ghost font-bold'>Blog</Link></li>
 
                         </ul>
 

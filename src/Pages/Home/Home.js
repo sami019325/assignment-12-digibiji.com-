@@ -5,6 +5,8 @@ import laptopParts from './../../Resources/istockphoto-523625442-612x612-removeb
 import parts1 from './../../Resources/download-removebg-preview.png'
 import parts2 from './../../Resources/GeIL-Polaris-RGB-removebg-preview.png'
 import parts3 from './../../Resources/robeytech-senna-featured-image-removebg-preview.png'
+import ShopNowbanner from './../../Resources/shop-now-banner-design-vector-27409382-removebg-preview.png'
+import Catagories from './Catagories';
 
 
 const Home = () => {
@@ -68,7 +70,10 @@ const Home = () => {
                 </div>
             </div>
 
-
+            <div className='flex flex-col justify-center items-center w-11/12 m-auto'>
+                <img src={ShopNowbanner} alt="shop now banner" srcset="" />
+                <Catagories></Catagories>
+            </div>
         </div>
     );
 };
