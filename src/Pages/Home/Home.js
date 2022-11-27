@@ -39,7 +39,7 @@ const Home = () => {
     return (
         <div>
             {/* home impression  */}
-            <div className=' grid grid-cols-1 md:grid-cols-3 m-auto mt-20 p-5 w-11/12 bg-indigo-800 rounded-2xl'>
+            <div className=' grid grid-cols-1 md:grid-cols-3 m-auto mt-36 p-5 w-11/12 bg-indigo-800 rounded-2xl'>
                 <div className=' items-center justify-center '>
                     <img className='bg_Img_Of_Home' src={laptopParts} alt="laptop " />
                 </div>

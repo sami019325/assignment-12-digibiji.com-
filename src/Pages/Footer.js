@@ -3,7 +3,7 @@ import { BsLinkedin, BsFacebook, BsGithub } from "react-icons/bs";
 import DevPhoto from './../Resources/myProfile.jpg'
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-blue-800 text-white">
+        <footer className="footer footer-center p-10 bg-indigo-800 text-white">
             <div>
                 <img src={DevPhoto} alt='developer of the website' width="80" height="80" viewBox="0 0 24 24" fillRule="evenodd" clipRule="evenodd" className="inline-block fill-current rounded-full" />
                 <p className="font-bold">
