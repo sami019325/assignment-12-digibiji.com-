@@ -9,7 +9,7 @@ const Catagories = () => {
             .then(data => setCategory(data))
     }, [])
     return (
-        <div className='w-10/12 m-auto my-10 grid grid-cols-3 gap-3'>
+        <div className='w-10/12 m-auto my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
             {
                 category.map(cate => <div key={cate._id}>
                     <div className='border border-spacing-2 hover:border-indigo-800 cursor-pointer flex flex-col h-full p-5 items-center justify-center  rounded-3xl'>
