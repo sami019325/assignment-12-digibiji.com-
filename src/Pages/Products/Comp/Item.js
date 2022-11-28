@@ -29,7 +29,6 @@ const Item = ({ item }) => {
                     </div>
                 </div>
                 <small className='text-center text-gray-600 m-4'>Uploaded: {posted}</small>
-
             </div>
         </div>
     );
