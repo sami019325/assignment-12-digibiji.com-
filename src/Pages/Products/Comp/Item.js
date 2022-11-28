@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MdLocationOn, MdAddShoppingCart, MdVerified } from "react-icons/md";
 
-const Item = ({ item }) => {
-    console.log('inner call', item);
+const Item = ({ item, setfindItem, setproduct }) => {
+    setproduct(item)
     const { name, picture, Seller, price, location, OriginalPrice, used, posted, condition } = item
     return (
         <div>
@@ -24,7 +24,8 @@ const Item = ({ item }) => {
                         <p>The product is <span className='font-bold'> {used}</span> used and it is still is in <span className='font-bold'> {condition} </span> condition. Original price of the product was <span className='font-bold'>{OriginalPrice}</span>. </p>
                     </div>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button onClick={() => setfindItem(true)} className="btn btn-primary"> <label htmlFor="my-modal-5" >Buy Now</label></button>
+
                         <button className="btn btn-ghost"><MdAddShoppingCart className='text-2xl' /></button>
                     </div>
                 </div>
