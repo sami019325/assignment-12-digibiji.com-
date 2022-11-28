@@ -11,7 +11,7 @@ const Products = () => {
     const [findItem, setfindItem] = useState(false)
     const [product, setproduct] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${IDENDARTA}`)
+        fetch(`https://y-sami019325.vercel.app/category/${IDENDARTA}`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

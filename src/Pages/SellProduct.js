@@ -20,7 +20,7 @@ const SellProduct = () => {
         const image = e.target.image.value;
         const product = { user, email, price, productT, name, location, used, originPrice, date, image }
         console.log(product)
-        fetch('http://localhost:5000/product/data', {
+        fetch('https://y-sami019325.vercel.app/product/data', {
             method: 'POST',
             body: JSON.stringify(product),
             headers: { 'Content-Type': 'application/json' },
