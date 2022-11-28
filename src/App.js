@@ -16,7 +16,14 @@ const router = createBrowserRouter([
       { path: '/login', element: <LogIn /> },
       { path: '/register', element: <Register /> },
       { path: '/blog', element: <Blog /> },
-      { path: '/products/:id', element: <Products /> },
+      {
+        path: '/products/:id',
+        loader: ({ params }) => {
+          const Dataid = params.id;
+          return Dataid
+        },
+        element: <Products />
+      },
     ]
   }
 ])
