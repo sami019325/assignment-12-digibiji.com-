@@ -7,6 +7,7 @@ import LogIn from './Pages/LogIn';
 import Register from './Pages/Register';
 import Blog from './Pages/Blog';
 import Products from './Pages/Products/Products';
+import SellProduct from './Pages/SellProduct';
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       { path: '/login', element: <LogIn /> },
       { path: '/register', element: <Register /> },
+      { path: '/sale', element: <SellProduct /> },
       { path: '/blog', element: <Blog /> },
       {
         path: '/products/:id',

@@ -6,9 +6,9 @@ const BuyModal = ({ findItem, setfindItem, product }) => {
 
     console.log("productsss  ============ ", product)
 
-    if (findItem) {
+    const soldCall = () => {
         console.log('find item')
-        fetch(``)
+        fetch(`http://localhost:5000/product/${product._id}`)
             .then(res => res.json())
             .then(data => console.log(data))
     }
@@ -25,7 +25,7 @@ const BuyModal = ({ findItem, setfindItem, product }) => {
                         <img src={product.picture} alt="" srcset="" />
                     </div>
                     <div className="modal-action">
-                        <label htmlFor="my-modal-5" className="btn">Buy</label>
+                        <label htmlFor="my-modal-5" onClick={soldCall} className="btn">Buy</label>
                         <label htmlFor="my-modal-5" className="btn btn-outline">Cancel</label>
                     </div>
                 </div>

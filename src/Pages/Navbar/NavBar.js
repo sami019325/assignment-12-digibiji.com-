@@ -25,12 +25,12 @@ const NavBar = () => {
                     <div className="flex-none">
                         <ul className='flex items-center justify-center'>
                             <li><Link to='/blog' className='btn btn-ghost font-bold'>Blog</Link></li>
-
                         </ul>
 
                         {
                             user.uid ?
                                 <div className='flex items-center justify-center'>
+                                    <Link to='/sale' className='btn btn-ghost font-bold'>Sell</Link>
                                     <div className="dropdown dropdown-end">
                                         <label tabIndex={0} className="btn btn-ghost btn-circle">
                                             <div className="indicator">
