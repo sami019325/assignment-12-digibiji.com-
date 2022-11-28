@@ -20,6 +20,13 @@ const SellProduct = () => {
         const image = e.target.image.value;
         const product = { user, email, price, productT, name, location, used, originPrice, date, image }
         console.log(product)
+        fetch('http://localhost:5000/product/data', {
+            method: 'POST',
+            body: JSON.stringify(product),
+            headers: { 'Content-Type': 'application/json' },
+        })
+            .then(res => res.json())
+            .then(json => console.log(json.user))
     }
     return (
         <div className='pt-36 pb-10'>
