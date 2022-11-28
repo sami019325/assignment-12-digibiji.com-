@@ -7,19 +7,18 @@ const SellProduct = () => {
 
     const InsertData = (e) => {
         e.preventDefault()
-        const event = e.target
-        const user = e.target.user.value
-        const email = e.target.email.value
-        const name = e.target.name.value
-        const location = e.target.location.value
-        const used = e.target.used.value
-        const date = e.target.date.value
-        const originPrice = e.target.originPrice.value
-        const price = e.target.price.value
-        const type = e.target.type.value
-        const number = e.target.number.value
-        const image = e.target.image.value
-        const product = { user, email, price, type, number, name, location, used, originPrice, date, image }
+        const form = e.target;
+        const user = e.target.user.value;
+        const email = e.target.email.value;
+        const name = e.target.name.value;
+        const location = e.target.location.value;
+        const used = e.target.used.value;
+        const date = e.target.date.value;
+        const originPrice = e.target.originPrice.value;
+        const price = e.target.price.value;
+        const productT = e.target.productT.value;
+        const image = e.target.image.value;
+        const product = { user, email, price, productT, name, location, used, originPrice, date, image }
         console.log(product)
     }
     return (
@@ -45,8 +44,8 @@ const SellProduct = () => {
                 <p className='font-bold'>Selling price:</p>
                 <input type="number" placeholder="Type here" required name='price' className="input input-bordered w-full " />
                 <p className='font-bold'>Selling Type:</p>
-                <select className="select select-ghost w-full ">
-                    <option name='type' disabled selected>Pick the best JS framework</option>
+                <select name='productT' className="select select-ghost w-full ">
+                    <option disabled selected>Pick the best JS framework</option>
                     <option>processor</option>
                     <option>casing</option>
                     <option>ram</option>
