@@ -18,15 +18,43 @@ const SellProduct = () => {
         const price = e.target.price.value;
         const productT = e.target.productT.value;
         const image = e.target.image.value;
-        const product = { user, email, price, productT, name, location, used, originPrice, date, image }
+        const product = {
+            picture: image,
+            type: productT,
+            Seller: user,
+            name: name,
+            location: location,
+            price: price,
+            OriginalPrice: originPrice,
+            used: used,
+            posted: date,
+            condition: 'excellent',
+            IsAdvertised: true,
+            IsSold: false
+        }
         console.log(product)
-        fetch('https://y-sami019325.vercel.app/product/data', {
+
+        fetch('http://localhost:5000/add', {
             method: 'POST',
-            body: JSON.stringify(product),
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(product)
         })
             .then(res => res.json())
-            .then(json => console.log(json.user))
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    //    setTreatment(null);
+                    //    toast.success('Booking confirmed');
+                    //    refetch();
+                }
+                else {
+                    //     toast.error(data.message);
+                }
+            })
+
+
     }
     return (
         <div className='pt-36 pb-10'>
