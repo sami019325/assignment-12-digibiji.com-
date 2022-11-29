@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import { SharedContext } from '../../Componets/SharedData';
 import BuyModal from './BuyModal';
 import Item from './Comp/Item';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const Products = () => {
     const [items, setItems] = useState([]);
@@ -13,7 +15,9 @@ const Products = () => {
     useEffect(() => {
         fetch(`https://y-sami019325.vercel.app/category/${IDENDARTA}`)
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => {
+                setItems(data)
+            })
     }, [])
 
     console.log('product for main', product)
@@ -27,6 +31,7 @@ const Products = () => {
                     ></Item>
                 </div>)
             }
+            <ToastContainer />
 
             <BuyModal findItem={findItem} product={product} ></BuyModal>
         </div>

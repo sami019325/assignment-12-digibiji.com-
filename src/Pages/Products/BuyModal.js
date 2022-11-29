@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 import { SharedContext } from '../../Componets/SharedData';
 
 const BuyModal = ({ findItem, setfindItem, product }) => {
@@ -7,14 +8,18 @@ const BuyModal = ({ findItem, setfindItem, product }) => {
     console.log("productsss  ============ ", product)
 
     const soldCall = () => {
-        console.log('find item')
-        fetch(`http://localhost:5000/product/${product._id}`)
+        console.log('find item', product._id)
+        fetch(`http://localhost:5000/delete/${product._id}`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                toast.success("Your order is accepted")
+
+            })
+        toast.success("Your order is on the way 🚗 🚗 ")
     }
     return (
         <div>
-            {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-5" className="modal-toggle" />
             <div className="modal flex flex-col items-center justify-center">
                 <div className="modal-box w-11/12 max-w-5xl ">
