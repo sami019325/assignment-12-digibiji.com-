@@ -8,6 +8,7 @@ import Register from './Pages/Register';
 import Blog from './Pages/Blog';
 import Products from './Pages/Products/Products';
 import SellProduct from './Pages/SellProduct';
+import NoPage from './Pages/Home/NoPage';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: '/register', element: <Register /> },
       { path: '/sale', element: <SellProduct /> },
       { path: '/blog', element: <Blog /> },
+      { path: '*', element: <NoPage /> },
       {
         path: '/products/:id',
         loader: ({ params }) => {

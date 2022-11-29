@@ -9,7 +9,7 @@ const BuyModal = ({ findItem, setfindItem, product }) => {
 
     const soldCall = () => {
         console.log('find item', product._id)
-        fetch(`http://localhost:5000/delete/${product._id}`)
+        fetch(`https://y-sami019325.vercel.app/delete/${product._id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
