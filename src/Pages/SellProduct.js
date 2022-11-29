@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { SharedContext } from '../Componets/SharedData';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SellProduct = () => {
     const { user } = useContext(SharedContext)
@@ -45,10 +46,11 @@ const SellProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
+                toast.success('order created')
                 console.log(data);
                 if (data.acknowledged) {
-                    form = null
                     toast.success('Booking confirmed');
+                    form = null;
                 }
                 else {
                     //     toast.error(data.message);
@@ -57,10 +59,10 @@ const SellProduct = () => {
 
 
     }
-    const notify = () => toast("Wow so easy!");
 
     return (
         <div className='pt-36 pb-10'>
+            <ToastContainer />
             <form className='w-6/12 m-auto bg-indigo-300 p-6' onSubmit={InsertData}>
                 <input type="text" name='user' defaultValue={user.displayName} disabled className="input input-bordered w-full " />
                 <br />
