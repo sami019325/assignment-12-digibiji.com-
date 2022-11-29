@@ -6,7 +6,7 @@ const Item = ({ item, setfindItem, setproduct }) => {
     const { name, picture, Seller, price, location, OriginalPrice, used, posted, condition } = item
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 h-full shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={picture} alt="Shoes" className="rounded-xl" />
                 </figure>

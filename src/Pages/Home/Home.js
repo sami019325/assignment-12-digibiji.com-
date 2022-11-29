@@ -7,6 +7,8 @@ import parts2 from './../../Resources/GeIL-Polaris-RGB-removebg-preview.png'
 import parts3 from './../../Resources/robeytech-senna-featured-image-removebg-preview.png'
 import ShopNowbanner from './../../Resources/shop-now-banner-design-vector-27409382-removebg-preview.png'
 import Catagories from './Catagories';
+import Loading from '../../Componets/Loading';
+import Advertise from './Advertise';
 
 
 const Home = () => {
@@ -74,6 +76,12 @@ const Home = () => {
                 <img src={ShopNowbanner} alt="shop now banner" srcset="" />
                 <Catagories></Catagories>
             </div>
+            <div className='flex flex-col justify-center items-center w-11/12 m-auto'>
+                <h1 className="text-center font-bold text-2xl px-5 py-2 text-white bg-black ">Advertised</h1>
+                <hr className='hero' />
+                <Advertise></Advertise>
+            </div>
+
         </div>
     );
 };
