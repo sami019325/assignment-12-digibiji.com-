@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { SharedContext } from '../Componets/SharedData';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SellProduct = () => {
     const { user } = useContext(SharedContext)
-
-
+    const [advers, setAdvers] = useState(false)
+    console.log(advers)
     const InsertData = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -18,6 +19,7 @@ const SellProduct = () => {
         const price = e.target.price.value;
         const productT = e.target.productT.value;
         const image = e.target.image.value;
+        const condition = e.target.condition.value;
         const product = {
             picture: image,
             type: productT,
@@ -28,8 +30,8 @@ const SellProduct = () => {
             OriginalPrice: originPrice,
             used: used,
             posted: date,
-            condition: 'excellent',
-            IsAdvertised: true,
+            condition: condition,
+            IsAdvertised: advers,
             IsSold: false
         }
         console.log(product)
@@ -45,9 +47,8 @@ const SellProduct = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    //    setTreatment(null);
-                    //    toast.success('Booking confirmed');
-                    //    refetch();
+                    form = null
+                    toast.success('Booking confirmed');
                 }
                 else {
                     //     toast.error(data.message);
@@ -56,6 +57,8 @@ const SellProduct = () => {
 
 
     }
+    const notify = () => toast("Wow so easy!");
+
     return (
         <div className='pt-36 pb-10'>
             <form className='w-6/12 m-auto bg-indigo-300 p-6' onSubmit={InsertData}>
@@ -80,13 +83,24 @@ const SellProduct = () => {
                 <input type="number" placeholder="Type here" required name='price' className="input input-bordered w-full " />
                 <p className='font-bold'>Selling Type:</p>
                 <select name='productT' className="select select-ghost w-full ">
-                    <option disabled selected>Pick the best JS framework</option>
+                    <option disabled selected>Pick the type of product</option>
                     <option>processor</option>
                     <option>casing</option>
                     <option>ram</option>
                 </select>
+                <select name='condition' className="select select-ghost w-full ">
+                    <option disabled selected>Pick the condition of product</option>
+                    <option>good</option>
+                    <option>excellent</option>
+                    <option>fair</option>
+                </select>
                 <p className='font-bold'>Image URL:</p>
                 <input type="text" placeholder="Type here" required name='image' className="input input-bordered w-full " />
+                <br />
+                <br />
+                <div className='flex items-center justify-center'>
+                    <button className={`btn text-red-800 font-bold ${advers ? 'btn-info' : 'btn-ghost'}`} onClick={() => setAdvers(!advers)}>Advertise?</button>
+                </div>
                 <br />
                 <br />
                 <div className='flex items-center justify-center'>
